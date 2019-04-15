@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.125" maxHeight="400" maxWidth="500" minHeight="400" minWidth="600" orientation="VERTICAL" prefHeight="400" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PatientWindowController">
+  <items>
+    <AnchorPane focusTraversable="true" minHeight="50" minWidth="600" prefHeight="50" prefWidth="600">
+         <children>
+            <Label alignment="CENTER" prefHeight="50" prefWidth="600" text="门诊挂号" textAlignment="JUSTIFY" textOverrun="CLIP">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+         </children></AnchorPane>
+    <AnchorPane centerShape="false" minHeight="350" minWidth="600" prefHeight="350" prefWidth="600">
+         <children>
+            <HBox layoutX="30.0" layoutY="30.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="25.0" minHeight="30" text="科室名称" />
+                  <ComboBox fx:id="combox_ksmc" editable="true" onAction="#updateShow" prefHeight="30.0" prefWidth="200" />
+               </children>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="90.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="25.0" text="号种类别" />
+                  <ComboBox fx:id="combox_hzlb" editable="false" onAction="#updateShow" prefHeight="30.0" prefWidth="200" />
+               </children>
+            </HBox>
+            <HBox layoutX="30" layoutY="150.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="25.0" text="交款金额" />
+                  <TextField fx:id="tf_pay" layoutX="53.0" layoutY="20.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="30" layoutY="210.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="25.0" text="找零金额" />
+                  <TextField fx:id="tf_change" editable="false" layoutX="53.0" layoutY="20.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="310" layoutY="30">
+               <children>
+                  <Label layoutX="15.0" layoutY="25.0" text="医生姓名" />
+                  <ComboBox fx:id="combox_ysxm" editable="true" prefHeight="30.0" prefWidth="200" />
+               </children>
+            </HBox>
+            <HBox layoutX="310" layoutY="90">
+               <children>
+                  <Label layoutX="15.0" layoutY="25.0" text="号种名称" />
+                  <TextField fx:id="tf_hzmc" editable="false" layoutX="53.0" layoutY="20.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="310" layoutY="150.0">
+               <children>
+                  <Label layoutX="15.0" layoutY="25.0" text="挂号号码" />
+                  <TextField fx:id="tf_ghhm" layoutX="53.0" layoutY="20.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="310" layoutY="210">
+               <children>
+                  <Label layoutX="15.0" layoutY="25.0" text="应缴金额" />
+                  <TextField fx:id="tf_cost" editable="false" layoutX="53.0" layoutY="20.0" />
+               </children>
+            </HBox>
+            <Button onAction="#registered" layoutX="167.0" layoutY="306.0" mnemonicParsing="false" text="确定" />
+            <Button layoutX="282.0" layoutY="306.0" mnemonicParsing="false" text="清除" />
+            <Button layoutX="398.0" layoutY="306.0" mnemonicParsing="false" text="退出" />
+            <Button layoutX="508.0" layoutY="306.0" mnemonicParsing="false" text="预存" />
+            <Button layoutX="62.0" layoutY="306.0" mnemonicParsing="false" text="退号" />
+            <HBox layoutX="310.0" layoutY="259.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="50.0" text="余额：" />
+                  <TextField fx:id="tf_money" editable="false" prefHeight="30.0" prefWidth="207.0" />
+               </children>
+            </HBox>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

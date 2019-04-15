@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginWindowController">
+   <children>
+      <HBox layoutX="91.0" layoutY="31.0">
+         <children>
+            <Label layoutX="86.0" layoutY="117.0" prefHeight="30.0" prefWidth="45.0" text="账号：" />
+            <TextField fx:id="tf_loginID" layoutX="164.0" layoutY="112.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="91.0" layoutY="86.0">
+         <children>
+            <Label layoutX="86.0" layoutY="172.0" prefHeight="30.0" prefWidth="45.0" text="密码：" />
+            <PasswordField fx:id="pf_passwd" />
+         </children>
+      </HBox>
+      <HBox layoutX="89.0" layoutY="137.0" prefHeight="28.0" prefWidth="247.0">
+         <children>
+            <RadioButton fx:id="rb_patient" layoutX="178.0" layoutY="281.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="129.0" selected="true" text="病人">
+               <toggleGroup>
+                  <ToggleGroup fx:id="g" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rt_doctors" layoutX="62.0" layoutY="284.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="107.0" text="医生" toggleGroup="$g" />
+         </children>
+      </HBox>
+      <ToggleButton layoutX="79.0" layoutY="129.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="247.0" toggleGroup="$g" visible="false" />
+      <Button fx:id="btn_login" layoutX="109.0" layoutY="194.0" mnemonicParsing="false" text="登录" />
+      <Button fx:id="btn_exit" layoutX="257.0" layoutY="194.0" mnemonicParsing="false" text="退出" />
+   </children>
+</Pane>
