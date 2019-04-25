@@ -17,7 +17,7 @@
       <HBox layoutX="91.0" layoutY="86.0">
          <children>
             <Label layoutX="86.0" layoutY="172.0" prefHeight="30.0" prefWidth="45.0" text="密码：" />
-            <PasswordField fx:id="pf_passwd" />
+            <PasswordField fx:id="tf_passwd" />
          </children>
       </HBox>
       <HBox layoutX="89.0" layoutY="137.0" prefHeight="28.0" prefWidth="247.0">

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DoctorWindowController">
+   <children>
+      <TabPane layoutY="-2.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_patient" text="病人列表">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="279.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="tableView_patient" layoutX="-5.0" layoutY="1.0" prefHeight="361.0" prefWidth="606.0">
+                           <columns>
+                              <TableColumn fx:id="pait_ghbh" prefWidth="75.0" text="挂号编号" />
+                              <TableColumn fx:id="pait_brmc" prefWidth="75.0" text="病人名称" />
+                              <TableColumn fx:id="pait_ghrq" prefWidth="75.0" text="挂号日期时间" />
+                              <TableColumn fx:id="pait_hzlb" prefWidth="75.0" text="号种类别" />
+                           </columns></TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_income" text="收入列表">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableView_income" prefHeight="312.0" prefWidth="600.0">
+                           <columns>
+                              <TableColumn fx:id="doct_ksmc" prefWidth="75.0" text="科室名称" />
+                              <TableColumn fx:id="doct_ysbh" prefWidth="75.0" text="医生编号" />
+                              <TableColumn fx:id="doct_ysmc" prefWidth="75.0" text="医生名称" />
+                              <TableColumn fx:id="doct_hzlb" prefWidth="75.0" text="号种类别" />
+                              <TableColumn fx:id="doct_ghrc" prefWidth="75.0" text="挂号人次" />
+                              <TableColumn fx:id="doct_srhj" prefWidth="75.0" text="收入合计" />
+                           </columns></TableView>
+                        <Label layoutX="14.0" layoutY="327.0" text="起始日期" />
+                        <TextField fx:id="tf_beginTime" onAction="#showIncomeInfo" layoutX="74.0" layoutY="322.0" />
+                        <TextField fx:id="tf_endTime" onAction="#showIncomeInfo" layoutX="375.0" layoutY="322.0" />
+                        <Label layoutX="315.0" layoutY="327.0" text="终止日期" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="246.0" layoutY="408.0" mnemonicParsing="false" onAction="#exit" text="退出系统" />
+   </children>
+</AnchorPane>

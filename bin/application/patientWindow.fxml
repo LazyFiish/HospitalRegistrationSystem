@@ -46,7 +46,7 @@
             <HBox layoutX="310" layoutY="30">
                <children>
                   <Label layoutX="15.0" layoutY="25.0" text="医生姓名" />
-                  <ComboBox fx:id="combox_ysxm" editable="true" prefHeight="30.0" prefWidth="200" />
+                  <ComboBox fx:id="combox_ysxm" editable="true" onAction="#updateShow" prefHeight="30.0" prefWidth="200" />
                </children>
             </HBox>
             <HBox layoutX="310" layoutY="90">
@@ -68,10 +68,8 @@
                </children>
             </HBox>
             <Button onAction="#registered" layoutX="167.0" layoutY="306.0" mnemonicParsing="false" text="确定" />
-            <Button layoutX="282.0" layoutY="306.0" mnemonicParsing="false" text="清除" />
-            <Button layoutX="398.0" layoutY="306.0" mnemonicParsing="false" text="退出" />
-            <Button layoutX="508.0" layoutY="306.0" mnemonicParsing="false" text="预存" />
-            <Button layoutX="62.0" layoutY="306.0" mnemonicParsing="false" text="退号" />
+            <Button onAction="#clear" layoutX="282.0" layoutY="306.0" mnemonicParsing="false" text="清除" />
+            <Button onAction="#exit" layoutX="398.0" layoutY="306.0" mnemonicParsing="false" text="退出" />
             <HBox layoutX="310.0" layoutY="259.0">
                <children>
                   <Label prefHeight="30.0" prefWidth="50.0" text="余额：" />

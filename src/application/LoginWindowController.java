@@ -12,11 +12,12 @@ import javafx.scene.control.RadioButton;
 
 import javafx.scene.control.PasswordField;
 
+
 public class LoginWindowController {
 	@FXML
 	public TextField tf_loginID;
 	@FXML
-	public PasswordField pf_passwd;
+	public PasswordField tf_passwd;
 	@FXML
 	public RadioButton rb_patient;
 	@FXML
